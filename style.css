@@ -8,6 +8,7 @@ body {
   background: linear-gradient(lightblue, aqua);
   height: 100vw;
 }
+
 main {
   margin-top: 5rem;
 }
@@ -18,11 +19,20 @@ main {
   margin: auto;
   background: white;
   min-height: 20rem;
+  border-radius: 15px;
+  min-width: 25rem;
 }
 
 .title {
   font-size: 2rem;
   font-weight: bold;
+  display: inline-block;
+  text-decoration: underline;
+}
+.title + img {
+  height: 2.5rem;
+  width: 2.5rem;
+  float: right;
 }
 
 .todo-add {
@@ -30,6 +40,13 @@ main {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+button {
+  background-color: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
 }
 .todo-add button {
   height: 2.5rem;
@@ -60,6 +77,11 @@ ul {
   display: none;
   height: 2.5rem;
   width: 2.5rem;
+  background-color: red;
+  border: none;
+}
+.todo-list__item:hover {
+  zoom: 101%;
 }
 
 .todo-list__item:hover .todo-delete {
@@ -73,7 +95,4 @@ ul {
   float: right;
   height: 2.5rem;
   width: 5rem;
-  background-color: purple;
-  color: white;
-  border: none;
 }
