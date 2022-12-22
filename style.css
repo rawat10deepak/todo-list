@@ -58,6 +58,7 @@ input[type='text'] {
   height: 2.5rem;
   width: 85%;
   padding: 1px 15px;
+  border-radius: 5px;
 }
 
 ul {
@@ -70,12 +71,13 @@ ul {
   margin: 1rem 0 1rem 0;
   width: 100%;
   line-height: 2.5rem;
-  background: #ccd;
+  background: #ccc;
   padding-left: 1rem;
+  border-radius: 5px;
 }
 
 .todo-list__item:hover {
-  zoom: 101%;
+  background: #ccf;
   display: flex;
   justify-content: space-between;
 }
