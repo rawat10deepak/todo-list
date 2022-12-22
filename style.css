@@ -6,7 +6,7 @@
 body {
   margin: 0;
   background: linear-gradient(lightblue, aqua);
-  height: 100vw;
+  height: 100vh;
 }
 
 main {
@@ -21,6 +21,7 @@ main {
   min-height: 20rem;
   border-radius: 15px;
   min-width: 25rem;
+  box-shadow: 10px 10px 30px 1px purple;
 }
 
 .title {
@@ -56,6 +57,7 @@ button {
 input[type='text'] {
   height: 2.5rem;
   width: 85%;
+  padding: 1px 15px;
 }
 ul {
   margin: 0;
