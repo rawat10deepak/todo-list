@@ -26,6 +26,9 @@ clearAllButton.addEventListener('click', () => {
 
 const updateTaskCountInFooter = () => {
   todoFooterPending.innerHTML = `You have ${taskCount} pending tasks`;
+  taskCount === 0
+    ? (clearAllButton.style.display = 'none')
+    : (clearAllButton.style.display = 'block');
 };
 
 const addTaskToTaskList = () => {

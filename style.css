@@ -50,7 +50,7 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
+button:not([id*='todo-delete-']):hover {
   background-color: #ccf;
   color: purple;
 }
@@ -70,6 +70,8 @@ input[type='text'] {
 ul {
   margin: 0;
   padding: 0;
+  max-height: 50vh;
+  overflow: auto;
 }
 
 .todo-list__item {
@@ -98,6 +100,10 @@ ul {
   width: 2.5rem;
   background-color: red;
   border: none;
+}
+
+.todo-footer {
+  margin-top: 1rem;
 }
 
 .todo-footer span {
