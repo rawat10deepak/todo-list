@@ -1,10 +1,10 @@
 var taskCount = 0;
 
 var todoFooterPending = document.querySelector('.todo-footer__pending');
-var addTodoButton = document.getElementById('add-task');
+var addTodoButton = document.getElementById('add-button');
 var clearAllButton = document.querySelector('.todo-footer__clearall');
 var todoItemsList = document.querySelector('.todo-list__items');
-var todoTextField = document.getElementById('add-button');
+var todoTextField = document.getElementById('add-field');
 
 addTodoButton.addEventListener('click', () => {
   console.log('add todo clicked');
