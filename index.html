@@ -17,12 +17,12 @@
           alt="pin"
         />
         <section class="todo-add">
-          <input type="text" placeholder="Add your new todo" />
-          <button>+</button>
+          <input id="add-button" type="text" placeholder="Add your new todo" />
+          <button id="add-task">+</button>
         </section>
         <section class="todo-list">
-          <ul>
-            <li class="todo-list__item">
+          <ul class="todo-list__items">
+            <!-- <li class="todo-list__item">
               task1
               <button class="todo-delete">X</button>
             </li>
@@ -37,12 +37,12 @@
             <li class="todo-list__item">
               task3
               <button class="todo-delete">X</button>
-            </li>
+            </li> -->
           </ul>
         </section>
         <section class="todo-footer">
-          <span>You have 4 pending tasks</span>
-          <button>Clear All</button>
+          <span class="todo-footer__pending"></span>
+          <button class="todo-footer__clearall">Clear All</button>
         </section>
       </div>
     </main>
