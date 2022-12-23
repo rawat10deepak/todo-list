@@ -31,9 +31,11 @@ const updateTaskCountInFooter = () => {
 const addTaskToTaskList = () => {
   const list = document.createElement('li');
   list.innerHTML = todoTextField.value;
+  list.id = `todo-list-item-${taskCount}`;
   list.classList.add('todo-list__item');
   const deleteButton = document.createElement('button');
   deleteButton.innerHTML = 'X';
+  deleteButton.id = `todo-delete-${taskCount}`;
   deleteButton.classList.add('todo-delete');
   list.appendChild(deleteButton);
   todoItemsList.appendChild(list);

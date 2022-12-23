@@ -49,6 +49,12 @@ button {
   border: none;
   border-radius: 5px;
 }
+
+button:hover {
+  background-color: #ccf;
+  color: purple;
+}
+
 .todo-add button {
   height: 2.5rem;
   width: 2.5rem;
