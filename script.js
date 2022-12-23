@@ -37,8 +37,24 @@ const addTaskToTaskList = () => {
   deleteButton.innerHTML = 'X';
   deleteButton.id = `todo-delete-${taskCount}`;
   deleteButton.classList.add('todo-delete');
+  deleteTask(deleteButton);
   list.appendChild(deleteButton);
   todoItemsList.appendChild(list);
+};
+
+const deleteTask = (button) => {
+  button.addEventListener('click', (event) => {
+    console.log('deleteButton clicked');
+    const deletedId = event.target.id;
+    console.log(deletedId);
+    const todoToBeDeleted = document.getElementById(
+      `todo-list-item-${deletedId.split('-')[2]}`
+    );
+    todoToBeDeleted.remove();
+    console.dir(event.target.id);
+    taskCount--;
+    updateTaskCountInFooter();
+  });
 };
 
 const removeAllTasks = () => {
