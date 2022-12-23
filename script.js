@@ -5,6 +5,7 @@ var addTodoButton = document.getElementById('add-button');
 var clearAllButton = document.querySelector('.todo-footer__clearall');
 var todoItemsList = document.querySelector('.todo-list__items');
 var todoTextField = document.getElementById('add-field');
+var todoFooter = document.querySelector('.todo-footer');
 
 addTodoButton.addEventListener('click', () => {
   console.log('add todo clicked');
@@ -25,10 +26,14 @@ clearAllButton.addEventListener('click', () => {
 });
 
 const updateTaskCountInFooter = () => {
-  todoFooterPending.innerHTML = `You have ${taskCount} pending tasks`;
+  todoFooterPending.innerHTML = `You have ${taskCount} pending tasks!!`;
   taskCount === 0
-    ? (clearAllButton.style.display = 'none')
-    : (clearAllButton.style.display = 'block');
+    ? ((clearAllButton.style.display = 'none'),
+      (todoFooter.style.textAlign = 'center'),
+      (todoItemsList.style.border = 'none'))
+    : ((clearAllButton.style.display = 'block'),
+      (todoFooter.style.textAlign = 'start'),
+      (todoItemsList.style.borderTop = '1px solid #ccc'));
 };
 
 const addTaskToTaskList = () => {
