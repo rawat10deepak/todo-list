@@ -8,8 +8,6 @@ var todoTextField = document.getElementById('add-field');
 var todoFooter = document.querySelector('.todo-footer');
 
 addTodoButton.addEventListener('click', () => {
-  console.log('add todo clicked');
-  console.log('added task is  - ' + todoTextField.value);
   if (todoTextField.value && todoTextField.value !== '') {
     taskCount++;
     addTaskToTaskList();
@@ -51,15 +49,8 @@ const addTaskToTaskList = () => {
 };
 
 const deleteTask = (button) => {
-  button.addEventListener('click', (event) => {
-    console.log('deleteButton clicked');
-    const deletedId = event.target.id;
-    console.log(deletedId);
-    const todoToBeDeleted = document.getElementById(
-      `todo-list-item-${deletedId.split('-')[2]}`
-    );
-    todoToBeDeleted.remove();
-    console.dir(event.target.id);
+  button.addEventListener('click', () => {
+    button.parentElement.remove();
     taskCount--;
     updateTaskCountInFooter();
   });
